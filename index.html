@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boeing 737 NG CBT Quiz System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-plane"></i>
+                <span>Boeing 737 NG CBT</span>
+            </div>
+            <div class="nav-menu">
+                <span class="nav-item">Computer-Based Training Quiz System</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="app-container">
+        
+        <!-- Module Selection Screen -->
+        <div id="module-selection" class="screen active">
+            <div class="hero-section">
+                <h1 class="hero-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    Choose Your Training Module
+                </h1>
+                <p class="hero-subtitle">Master Boeing 737 NG systems with our comprehensive quiz collection</p>
+            </div>
+            
+            <div class="modules-grid">
+                <div class="module-card" data-module="air-conditioning">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fas fa-thermometer-half"></i>
+                        </div>
+                        <div class="module-badge">80 Questions</div>
+                    </div>
+                    <h3 class="module-title">Air Conditioning System</h3>
+                    <p class="module-description">Environmental control and cabin climate management</p>
+                    <div class="module-footer">
+                        <span class="duration">~60 min</span>
+                    </div>
+                </div>
+
+                <div class="module-card" data-module="aircraft-general">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <div class="module-badge">80 Questions</div>
+                    </div>
+                    <h3 class="module-title">Aircraft General</h3>
+                    <p class="module-description">Basic aircraft specifications and general knowledge</p>
+                    <div class="module-footer">
+                        <span class="duration">~50 min</span>
+                    </div>
+                </div>
+
+                <div class="module-card" data-module="anti-ice">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fas fa-snowflake"></i>
+                        </div>
+                        <div class="module-badge">80 Questions</div>
+                    </div>
+                    <h3 class="module-title">Anti-Ice & Rain</h3>
+                    <p class="module-description">Ice protection and weather protection systems</p>
+                    <div class="module-footer">
+                        
+                        <span class="duration">~45 min</span>
+                    </div>
+                </div>
+
+                <div class="module-card" data-module="automatic-flight">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="module-badge">80 Questions</div>
+                    </div>
+                    <h3 class="module-title">Automatic Flight</h3>
+                    <p class="module-description">Autopilot, autothrottle and flight management</p>
+                    <div class="module-footer">
+                        
+                        <span class="duration">~70 min</span>
+                    </div>
+                </div>
+
+                <div class="module-card" data-module="apu">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="module-badge">80 Questions</div>
+                    </div>
+                    <h3 class="module-title">Auxiliary Power Unit</h3>
+                    <p class="module-description">APU operation and emergency power systems</p>
+                    <div class="module-footer">
+                        
+                        <span class="duration">~40 min</span>
+                    </div>
+                </div>
+
+                <div class="module-card" data-module="bleed-air">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <div class="module-badge">77 Questions</div>
+                    </div>
+                    <h3 class="module-title">Bleed Air Systems</h3>
+                    <p class="module-description">Engine bleed air distribution and control</p>
+                    <div class="module-footer">
+                        
+                        <span class="duration">~60 min</span>
+                    </div>
+                </div>
+
+                <div class="module-card" data-module="communication">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fas fa-broadcast-tower"></i>
+                        </div>
+                        <div class="module-badge">60 Questions</div>
+                    </div>
+                    <h3 class="module-title">Communication</h3>
+                    <p class="module-description">VHF/HF radios, interphone, and data systems</p>
+                    <div class="module-footer">
+                        
+                        <span class="duration">~50 min</span>
+                    </div>
+                </div>
+
+                <div class="module-card" data-module="electrical">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <div class="module-badge">60 Questions</div>
+                    </div>
+                    <h3 class="module-title">Electrical System</h3>
+                    <p class="module-description">Power generation, distribution and backup systems</p>
+                    <div class="module-footer">
+                        
+                        <span class="duration">~50 min</span>
+                    </div>
+                </div>
+
+                <div class="module-card" data-module="emergency-equipment">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="module-badge">50 Questions</div>
+                    </div>
+                    <h3 class="module-title">Emergency Equipment, Doors & Windows</h3>
+                    <p class="module-description">Emergency systems, evacuation procedures and door operations</p>
+                    <div class="module-footer">
+                        
+                        <span class="duration">~40 min</span>
+                    </div>
+                </div>
+
+                <div class="module-card" data-module="engines">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="module-badge">120 Questions</div>
+                    </div>
+                    <h3 class="module-title">Engines</h3>
+                    <p class="module-description">CFM56 engine operation and management</p>
+                    <div class="module-footer">
+                        
+                        <span class="duration">~90 min</span>
+                    </div>
+                </div>
+
+                <div class="module-card" data-module="flight-controls">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fas fa-sliders-h"></i>
+                        </div>
+                        <div class="module-badge">80 Questions</div>
+                    </div>
+                    <h3 class="module-title">Flight Controls</h3>
+                    <p class="module-description">Primary and secondary flight control systems</p>
+                    <div class="module-footer">
+                        
+                        <span class="duration">~60 min</span>
+                    </div>
+                </div>
+
+                <div class="module-card" data-module="fuel">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fas fa-gas-pump"></i>
+                        </div>
+                        <div class="module-badge">80 Questions</div>
+                    </div>
+                    <h3 class="module-title">Fuel System</h3>
+                    <p class="module-description">Fuel storage, distribution and management</p>
+                    <div class="module-footer">
+                        
+                        <span class="duration">~50 min</span>
+                    </div>
+                </div>
+
+                <div class="module-card" data-module="hydraulics">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <div class="module-badge">80 Questions</div>
+                    </div>
+                    <h3 class="module-title">Hydraulics</h3>
+                    <p class="module-description">Hydraulic power systems and fluid management</p>
+                    <div class="module-footer">
+                        
+                        <span class="duration">~55 min</span>
+                    </div>
+                </div>
+
+                <div class="module-card" data-module="landing-gear">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fas fa-plane-arrival"></i>
+                        </div>
+                        <div class="module-badge">80 Questions</div>
+                    </div>
+                    <h3 class="module-title">Landing Gear</h3>
+                    <p class="module-description">Landing gear operation and brake systems</p>
+                    <div class="module-footer">
+                        
+                        <span class="duration">~40 min</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Length Selection Screen -->
+        <div id="quiz-length-selection" class="screen">
+            <div class="selection-container">
+                <button class="back-btn" id="back-to-modules">
+                    <i class="fas fa-arrow-left"></i> Back to Modules
+                </button>
+                
+                <div class="selection-header">
+                    <div class="selected-module-info">
+                        <h2 id="selected-module-title">Air Conditioning System</h2>
+                        <p>Choose your preferred quiz length</p>
+                    </div>
+                </div>
+                
+                <div class="length-options">
+                    <div class="length-card" data-length="10">
+                        <div class="length-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="length-number">10</div>
+                        <div class="length-label">Quick Quiz</div>
+                        <div class="length-time">~10 minutes</div>
+                        <div class="length-description">Perfect for a quick review</div>
+                    </div>
+                    
+                    <div class="length-card" data-length="25">
+                        <div class="length-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="length-number">25</div>
+                        <div class="length-label">Standard Quiz</div>
+                        <div class="length-time">~25 minutes</div>
+                        <div class="length-description">Comprehensive assessment</div>
+                    </div>
+                    
+                    <div class="length-card" data-length="50">
+                        <div class="length-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="length-number">50</div>
+                        <div class="length-label">Extended Quiz</div>
+                        <div class="length-time">~50 minutes</div>
+                        <div class="length-description">Thorough knowledge test</div>
+                    </div>
+                    
+                    <div class="length-card expert" data-length="80">
+                        <div class="length-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="length-number">80</div>
+                        <div class="length-label">Complete Quiz</div>
+                        <div class="length-time">~80 minutes</div>
+                        <div class="length-description">Full expertise challenge</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <div class="quiz-progress-section">
+                        <div class="quiz-info">
+                            <h3 id="current-module">Air Conditioning System</h3>
+                            <div class="question-counter">
+                                Question <span id="current-question">1</span> of <span id="total-questions">80</span>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progress-fill"></div>
+                            </div>
+                            <span class="progress-percentage" id="progress-percentage">0%</span>
+                        </div>
+                    </div>
+                    <button class="quit-btn" id="quit-quiz">
+                        <i class="fas fa-times"></i> Quit Quiz
+                    </button>
+                </div>
+
+                <div class="question-section">
+                    <div class="question-card">
+                        <div class="question-text" id="question-text">
+                            Loading question...
+                        </div>
+                        
+                        <div class="options-container" id="options-container">
+                            <!-- Options will be populated by JavaScript -->
+                        </div>
+                        
+                        <div class="explanation-container" id="explanation-container" style="display: none;">
+                            <div class="explanation-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <h4>Explanation</h4>
+                            </div>
+                            <p id="explanation-text"></p>
+                            <div class="reference">
+                                <i class="fas fa-book"></i>
+                                <strong>Reference:</strong> <span id="reference-text"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="quiz-controls">
+                            <button id="prev-question" class="prev-btn" disabled>
+                                <i class="fas fa-arrow-left"></i> Previous Question
+                            </button>
+                            <button id="next-question" class="next-btn" disabled>
+                                Next Question <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <div class="results-container">
+                <div class="results-header">
+                    <div class="results-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h2>Quiz Complete!</h2>
+                    <p>Here's how you performed</p>
+                </div>
+                
+                <div class="score-section">
+                    <div class="score-circle">
+                        <div class="score-value" id="final-score">0</div>
+                        <div class="score-label">%</div>
+                    </div>
+                </div>
+                
+                <div class="results-breakdown">
+                    <div class="result-stat">
+                        <div class="stat-icon correct">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">Correct Answers</span>
+                            <span class="stat-value" id="correct-count">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="result-stat">
+                        <div class="stat-icon incorrect">
+                            <i class="fas fa-times"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">Wrong Answers</span>
+                            <span class="stat-value" id="wrong-count">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="result-stat">
+                        <div class="stat-icon total">
+                            <i class="fas fa-list"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">Total Questions</span>
+                            <span class="stat-value" id="total-count">0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-actions">
+                    <button id="retake-quiz" class="btn-primary">
+                        <i class="fas fa-redo"></i> Retake Quiz
+                    </button>
+                    <button id="new-module" class="btn-secondary">
+                        <i class="fas fa-home"></i> Choose New Module
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-overlay" style="display: none;">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Preparing your quiz...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="quiz-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
