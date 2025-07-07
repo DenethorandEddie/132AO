@@ -9,7 +9,9 @@
       "Bash(sed:*)",
       "Bash(awk:*)",
       "Bash(rg:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(node:*)",
+      "Bash(mv:*)"
     ],
     "deny": []
   }

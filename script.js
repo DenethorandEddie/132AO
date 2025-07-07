@@ -88,6 +88,7 @@ class QuizApp {
         console.log('Event listeners initialized');
     }
     
+
     updateModuleQuestionCounts() {
         // Her modül için soru sayısını güncelle
         const moduleCards = document.querySelectorAll('.module-card');
@@ -157,8 +158,8 @@ class QuizApp {
         // Hangi seçenekleri göstereceğini belirle
         const availableOptions = standardOptions.filter(option => option <= totalQuestions);
         
-        // Eğer toplam soru sayısı standart seçeneklerden büyükse, maksimum seçeneği de ekle
-        if (totalQuestions > 50) {
+        // Eğer toplam soru sayısı 50'den farklıysa ve standart seçeneklerde yoksa, gerçek sayıyı ekle
+        if (totalQuestions !== 50 && !standardOptions.includes(totalQuestions)) {
             availableOptions.push(totalQuestions);
         }
         
@@ -576,3 +577,23 @@ function trackQuestionAnswered(questionIndex, isCorrect) {
         correct: isCorrect
     });
 }
+
+// Initialize the application when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if quizData is loaded
+    const quizDataExists = typeof quizData !== 'undefined';
+    console.log('Quiz data loaded:', quizDataExists);
+    
+    if (quizDataExists) {
+        console.log('Available modules:', Object.keys(quizData).length);
+        console.log('Module names:', Object.keys(quizData));
+        // Initialize the quiz application
+        window.app = new QuizApp();
+        console.log('QuizApp initialized and attached to window');
+        
+        console.log('QuizApp ready for use');
+    } else {
+        console.error('Quiz data not loaded. Make sure quiz-data.js is included.');
+        alert('Quiz data failed to load. Please refresh the page.');
+    }
+});
